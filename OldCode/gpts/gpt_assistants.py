@@ -3,7 +3,7 @@ from openai import OpenAI, APIConnectionError
 from azure.search.documents import SearchClient
 from azure.core.credentials import AzureKeyCredential
 import streamlit as st
-from gpts.tools import TOOLS3
+from OldCode.gpts.tools import TOOLS3
 import json
 
 # from gpts.tools import TOOLS

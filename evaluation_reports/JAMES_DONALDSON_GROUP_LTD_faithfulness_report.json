@@ -1,0 +1,100 @@
+{
+  "company_name": "JAMES_DONALDSON_GROUP_LTD",
+  "timestamp": "2025-12-31 09:09:11",
+  "summary": {
+    "total_tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "average_faithfulness_score": 0.9375
+  },
+  "test_breakdown": {
+    "rag_answer_tests": 1,
+    "synthesis_tests": 1
+  },
+  "detailed_results": [
+    {
+      "type": "rag_answer",
+      "question": "This section provides a high-level overview on what the company does, its operations, locations, products, customers and any ongoing debt/financial issues, in a bullet point format consisting of 5-6 bullet points with sentences, using the latest available annual reports/financial statements of the company \u2014 Include 1-2 bullet point sentences on what the company does \u2014 Include 1 bullet point on the products/services the company offers \u2014 Include 1 bullet point on where the company has its operations (e.g. manufacturing facilities, operating plants, offices, customers) \u2014 Include 1 bullet point on who are the customers of the company \u2014 Include 1 bullet point on stress triggers of the company (e.g., 40% revenue from top 1 customer; high fixed costs; collateral shortfall; aggressive capex; covenant breach; dropping profitability; mass lay-offs etc.)",
+      "eval": {
+        "overall_passed": true,
+        "citation_validation": {
+          "all_valid": true,
+          "total_citations": 5,
+          "missing_citations": []
+        },
+        "value_verification": {
+          "total_values": 12,
+          "verified": [
+            "\u00a358.6m",
+            "\u00a344.6m",
+            "\u00a36.5m",
+            "\u00a34.2m",
+            "\u00a37.4m",
+            "\u00a36.9m",
+            "\u00a33.1m",
+            "\u00a360.96m",
+            "\u00a362.0m",
+            "\u00a368.1m"
+          ],
+          "missing": [
+            "\u00a38.0m",
+            "\u00a33.4m"
+          ],
+          "faithfulness_score": 0.8333333333333334
+        },
+        "deepeval_faithfulness": {
+          "score": 0.875,
+          "reason": "The score is 0.88 because the actual output slightly misrepresented the net assets figures for FY24 and FY23, showing them as \u00a362.0m and \u00a368.1m respectively, instead of the correct figures of \u00a361,993,000 and \u00a370,395,000 as per the retrieval context.",
+          "passed": true,
+          "threshold": 0.7
+        },
+        "test_case": {
+          "question": "This section provides a high-level overview on what the company does, its operations, locations, products, customers and any ongoing debt/financial issues, in a bullet point format consisting of 5-6 bullet points with sentences, using the latest available annual reports/financial statements of the company \u2014 Include 1-2 bullet point sentences on what the company does \u2014 Include 1 bullet point on the products/services the company offers \u2014 Include 1 bullet point on where the company has its operations (e.g. manufacturing facilities, operating plants, offices, customers) \u2014 Include 1 bullet point on who are the customers of the company \u2014 Include 1 bullet point on stress triggers of the company (e.g., 40% revenue from top 1 customer; high fixed costs; collateral shortfall; aggressive capex; covenant breach; dropping profitability; mass lay-offs etc.)",
+          "answer": "- James Donaldson Group Limited (JDG) prepares consolidated financial statements for a UK-based group; the provided reports do not include a narrative business description of its trading activities (n...",
+          "context_length": 9149
+        }
+      }
+    },
+    {
+      "type": "synthesis",
+      "question": "\nFollow the formatting and instructions for each section of the output.\n\n**1. Business Overview**\n\n-",
+      "eval": {
+        "overall_passed": true,
+        "citation_preservation": {
+          "preserved": true,
+          "expected": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "actual": [
+            1,
+            2,
+            3,
+            4,
+            5,
+            6,
+            7,
+            8
+          ],
+          "lost": []
+        },
+        "deepeval_faithfulness": {
+          "score": 1.0,
+          "reason": "The score is 1.00 because there are no contradictions between the actual output and the retrieval context. Everything aligns perfectly, showcasing a high level of accuracy and consistency. Great job!",
+          "passed": true
+        },
+        "context_summary": {
+          "num_sources": 1,
+          "total_context_length": 3239
+        }
+      }
+    }
+  ]
+}
